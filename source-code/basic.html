@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RM1 Campaign</title>
+    <link rel="stylesheet" href="basic.css">
+</head>
+<body>
+
+<div class="grid-container">
+    <header>       
+        <div class="header-img">
+            <img src="img/iium_logo.png" alt="IIUM logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#form">Form</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+         </nav>    
+    </header>
+
+    <section class="banner-section">
+        <div class="banner-text" id="home">
+        <h1>RM 1 CAMPAIGN</h1>
+        <h5>Let your contribution be perpetual
+            for the please of Allah SWT</h5>
+        <button id="join-button"><a href="#form">Join Us Now</a></button>
+    </div>
+    </section>
+
+
+    <div class="quran-text">
+        <p id="arabic-title">In Al Baqarah: 261, Allah says...</p>
+        <p id="arabic">مَثَلُ الَّذِينَ يُنْفِقُونَ أَمْوَالَهُمْ فِي سَبِيلِ اللَّهِ كَمَثَلِ حَبَّةٍ أَنْبَتَتْ  <br>سَبْعَ سَنَابِلَ فِي كُلِّ سُنْبُلَةٍ مِائَةُ حَبَّةٍ ۗ وَاللَّهُ يُضَاعِفُ لِمَنْ يَشَاءُ<br> ۗ وَاللَّهُ وَاسِعٌ عَلِيمٌ</p>
+        <p id="translation">“The example of those who spend their wealth in the 
+            way of Allah is like a seed [of grain] which grows seven 
+            spikes; in each spike is a hundred grains. And Allah 
+            multiplies [His reward] for whom He wills. And Allah is 
+            all-Encompassing and Knowing.”</p>
+    </div>
+
+
+   <article id="about">
+            <h5>About our program</h5>
+        <div class="main-text">
+            <p>This program helps those in need to gain basic necessities such as food and shelter</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae voluptas facilis provident inventore suscipit, m eveniet?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo hic voluptatibus ratione nostrum. Vero voluptatum quod rem necessitatibus, corrupti nostrum, consequatur animi modi vitae dolor corporis mollitia facilis eveniet voluptate.
+            Nostrum, perspiciatis? Iste culpa doloremque suscipit veritatis at similique explicabo debitis natus autem, possimus eveniet alias ipsa consectetur labore? Reiciendis reprehenderit officia obcaecati eos ullam ea a rerum voluptatem hic.
+            Consectetur, neque expedita placeat esse illum eveniet. Enim ratione esse voluptates minus, reiciendis nihil earum ad nesciunt eaque vel repellendus atque, voluptate in nisi suscipit rem voluptatibus, incidunt corrupti molestias?
+            Temporibus dolores recusandae amet harum, quas eligendi cum at provident in, rerum aut itaque saepe voluptatem, asperiores blanditiis quaerat laboriosam magni quisquam nihil ut incidunt consectetur. Omnis accusantium unde dolores.</p>
+            <p>With only RM1 per month, you can make an impact while working daily. This will benefit majority of the poor including many children in the streets. Start taking action today and join us in this beautiful journey</p>
+            <p>Stay wholesome!</p>
+        </div>
+   </article>
+
+<section id="form" class="form-section">
+    <h5>Fill up the form!</h5>
+        
+   <form>
+ 
+        <div class="form-wrapper">
+            <div class="input-wrapper">
+                <label for="name">Name</label>
+                <input type="text" id="name"  placeholder="Your Name" required>                                           
+            </div>
+        
+            <div class="input-wrapper">
+                <label for="staff-no" >Staff No.</label>
+                <input type="text" id="staff-no" placeholder="ST01234" required>                           
+            </div>
+       
+
+            <div class="input-wrapper">
+                <label for="kdcio">K/D/C/I/O</label> 
+                <input type="text" id="kdcio" placeholder="KICT" required>              
+            </div>
+       
+            
+            <div class="input-wrapper">
+                <label for="contact-no">Contact</label>
+                <input type="tel" id="contact-no" placeholder="012-3456789" pattern="^01(?!1)[0-9]{1}-[0-9]{7}|011-[0-9]{8}" required>                          
+            </div>
+        
+            <div class="input-wrapper">
+                <label for="email">Email</label> 
+                <input type="email" id="email" placeholder="donator@gmail.com" required>                           
+            </div>
+        </div>
+
+
+            <div class="radio-amount-wrapper">  
+                <p>Amount to be deducted</p>         
+                <input type="radio" name="test" id="amount-deduct-rm1" value="RM 1">
+                <label for="amount-deduct-rm1" class="label-rm1">RM 1</label>
+                <input type="radio" name="test" id="amount-deduct-other" value="Other amount">
+                <label for="amount-deduct-other" class="label-other-amount"  required disabled>Other amount</label>
+            </div>
+        <br>
+        <div id="other-amount-container"></div>
+        <br>
+
+        <label for="date">The above salary will take effect:</label>
+       
+        <div class="date-wrapper">
+            <label for="date">From</label>
+            <input type="month" id="date" min="2023-12" max="2026-12" required>
+            <label for="date-to">To</label>
+            <input type="month" id="date-to" min="2023-12" max="2026-12" required>                       
+        </div>
+
+       <br><br>
+
+        <div class="agreement-wrapper">         
+            <input type="checkbox" id="agreement" required>  
+            <label for="agreement">I hereby agree to give consent</label>  <br><br>
+            <button type="submit">Submit</button>
+        </div>
+       
+        </form>
+    </section>
+
+    <fieldset>
+        <legend>Find us here</legend>
+        <p>IIUM ENDOWMEND FUND<br>
+            Level 3, Rectory <br>
+            International Islamic University Malaysia <br>
+            P.O Box 10, 50728 Kuala Lumpur.
+        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.3941215019363!2d101.73198847494736!3d3.2518375967232025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc395538d5c9e9%3A0x7da33f0805ab61ce!2sIIUM%20Endownment%20Fund%20Zakat%20Unit!5e0!3m2!1sen!2smy!4v1701155112312!5m2!1sen!2smy" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </fieldset>
+
+    <footer>
+          <h5>Contact</h5>
+
+    <div class="contact-first-wrapper" id="contact">
+
+        <div class="contact-container">
+
+          <div class="contact-icons-wrapper">           
+            <img src="img/call-icon.svg" alt=""> 
+            <img src="img/mail-icon.svg" alt="">
+            <img src="img/portal-icon.svg" alt="">  
+         </div>
+
+          <div class="contact-text-wrapper"> 
+            <p>03 6196 4268</p>
+            <p><a href="">ief@iium.edu.my </a></p>
+            <p><a href="">IIUM Endowment Fund </a></p>
+          </div>
+
+     </div>  
+     </div>
+        <div class="end-bar">
+
+        </div>
+    
+    </footer>
+
+
+</div>
+
+<script src="basic.js"></script>
+
+
+</body>
+</html>
