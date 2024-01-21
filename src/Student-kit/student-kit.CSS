@@ -1,0 +1,320 @@
+.main-container{
+    --minmax-column: 30em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--minmax-column), 1fr));
+}
+
+.class1{
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    
+}
+
+.class1-left {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/studentkit.jpg);
+    background-size: cover;
+    color: rgb(255, 252, 252);
+    padding-inline: clamp(1rem, -0.429rem + 3.81vw, 3rem);
+    padding-bottom: clamp(2rem, 0.571rem + 3.81vw, 4rem);
+    
+    h1{ 
+        font-size: clamp(2rem, -2.286rem + 11.429vw, 8rem);
+    }
+    h1, h4{
+        animation: fadein 3s;
+    }
+}
+@keyframes fadein{
+    from{
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+ 
+
+.facilities{
+    background-color: rgb(194, 175, 167);
+    display: grid;
+    grid-column: 1;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+
+    .main-facilities{
+        text-align: center;
+        margin-block: 2rem;
+        color: white;
+        
+    }
+}
+
+.facilities button{
+    margin: clamp(1rem, -0.429rem + 3.81vw, 3rem);
+    padding: 0.5rem;
+    width: clamp(7rem, 5.571rem + 3.81vw, 9rem);
+    background-color: white;
+    border:0.1rem solid rgb(91, 37, 9);
+    transition: transform 0.2s ease-in-out;
+    
+}
+.facilities button:hover,
+.facilities button:focus {
+    background-color: rgb(91, 37, 9);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+ .bathroom, .drying-area, .laundry, .room{
+        color: black;
+        background-color: rgb(255, 255, 255);
+        display: grid;
+        grid-column: 1;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        margin-inline: clamp(2rem, -2.286rem + 11.429vw, 8rem);
+        margin-bottom: 5rem;
+        animation: fadeIn 3s;
+        
+    
+        .room-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3rem;
+            padding-inline: clamp(2rem, 1.286rem + 1.905vw, 3rem);
+            padding-bottom: 2rem;
+            
+            
+    
+            .room-content-detail{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+        
+                img{
+                    
+                    height: auto;
+                    object-fit: contain;
+                    margin: 1rem;
+                }
+                detail{
+                    font-size: var(--fs-300);
+                }
+                ul{
+                    flex-direction: column;
+                    text-align: left;
+                    line-height: 1.5;
+    
+                }
+                
+                video{
+                    max-width: auto;
+                    margin: 2rem;
+                }
+            }
+        }
+        
+    
+}
+.bathroom, .drying-area, .laundry{
+    .room-content{
+        justify-content: center;
+    }
+}
+
+.others{
+    
+    display: grid;
+    grid-column: 1;
+    grid-template-rows: repeat(auto-fit, minmax(16rem, 1fr));
+    justify-content: center;
+    
+   
+
+    .others-detail1, .others-detail{
+        border: 2px solid rgb(91, 37, 9);
+        background-color: rgb(194, 175, 167);
+        display: flex;
+        padding-block: clamp(1.5rem, 1.143rem + 0.952vw, 2rem);
+        text-align: center;
+        margin: clamp(1.5rem, 0.429rem + 2.857vw, 3rem);
+        align-items: center;
+        padding-inline: clamp(1.5rem, 1.143rem + 0.952vw, 2rem);
+       
+            
+
+        .class-detail{
+            background-color: white;
+            line-height: 2rem;
+            padding: clamp(1rem, -0.429rem + 3.81vw, 3rem);
+            margin-inline: clamp(1rem, -0.429rem + 3.81vw, 3rem);;
+            
+            
+        }
+        img {
+            height: clamp(13rem, 10.143rem + 7.619vw, 17rem);
+            object-fit: contain;
+            
+        }
+
+    }
+    .others-detail{
+        position: relative;
+        transform: translateX(-300px);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+    .others-detail1{
+        position: relative;
+        transform: translateX(300px);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+    .others-detail.active{
+        transform: translateX(0);
+        opacity: 1;
+      }
+      .others-detail1.active{
+        transform: translateX(0);
+        opacity: 1;
+      }
+    
+    
+}
+
+
+.report{
+    margin-top: clamp(1rem, -1.143rem + 5.714vw, 4rem);
+    background-color: rgb(194, 175, 167);
+    display: grid;
+    grid-column: 1;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    
+
+    .report-detail{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-block: clamp(1rem, 0.286rem + 1.905vw, 2rem);
+
+    .report-image{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-block: clamp(1rem, 0.286rem + 1.905vw, 2rem);
+
+        img {
+            height: clamp(11rem, 4.571rem + 17.143vw, 20rem);
+            object-fit: contain;
+            margin-inline: clamp(1rem, -0.429rem + 3.81vw, 3rem);
+        }
+    }
+    }
+    
+    .report-detail {
+        position: relative;
+        transform: translateY(50%);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+    
+    .report-detail.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+
+
+
+.cinnamon{
+    display: grid;
+    grid-column: 1;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    .cinnamon1{
+        display: flex;
+        flex-direction: row;
+        margin: clamp(1rem, -0.429rem + 3.81vw, 3rem);
+        align-items: center;
+        justify-content: center;
+
+        
+        .cinnamon1-image, .cinnamon2-image, .cinnamon3-image{
+            display: flex;
+            flex-direction: column;
+            border-radius: 1rem;
+            border: 0.1rem solid rgb(101, 75, 19);
+            margin-inline: clamp(1.5rem, 0.429rem + 2.857vw, 3rem);
+            padding: clamp(0.5rem, 0.143rem + 0.952vw, 1rem);
+            text-align: center;
+            img{
+                height:clamp(7rem, 5.571rem + 3.81vw, 9rem);
+                object-fit: contain;
+                
+            }
+
+        }
+    }
+    .cinnamon1 {
+        position: relative;
+        transform: translateY(50%);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+    
+    .cinnamon1.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+ 
+.cinnamon1-image:hover,
+.cinnamon2-image:hover,
+.cinnamon3-image:hover{
+    transform: scale(1.2);
+    background-color: solid rgb(101, 75, 19);
+}
+
+.content{
+    display: grid;
+    grid-column: 1;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+
+    .outer-content{
+        
+        .general-content, .mahallah-content, .traffic-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                margin-top: clamp(1rem, 0.286rem + 1.905vw, 2rem);
+                height: clamp(15rem, 7.857rem + 19.048vw, 25rem);
+                animation: fadeIn 3s;
+            }
+            
+
+        }
+
+}
+}
+my-footer{
+    grid-column: 1;
+}
+
+
+
+
+        
+
+
+
+
+
