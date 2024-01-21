@@ -1,3 +1,5 @@
+MAHALLAH AMINAH WEBSITE PROJECT
+
 The src file contains source code of each page of the website.
 -Each file also includes image folder
 
