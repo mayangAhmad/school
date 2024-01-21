@@ -1,3 +1,8 @@
+/*
+Content of this file:
+Creating a header and footer as HTML component
+Stikcy Header
+*/
 
 class MyHeader extends HTMLElement {
     connectedCallback() {
