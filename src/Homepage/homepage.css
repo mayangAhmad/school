@@ -1,0 +1,657 @@
+
+.main-container{
+    --minmax-column: 30em;
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(var(--minmax-column), 1fr));
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-container{
+    display: grid;
+    grid-column: 1;
+    height: 40rem;  
+    grid-template-areas: 'stack';
+    background-size: cover;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(icon/muslim-students.jpg);
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    min-width: fit-content;
+    justify-content: center;
+    padding-inline: clamp(3rem, 0.5rem + 8vw, 8rem);
+}
+
+.hero-content > * {
+    grid-area: stack;
+}
+
+.hero-content h4{
+    color: white;
+}
+
+.hero-main-text{
+    display: flex;
+    max-width: fit-content;
+}
+
+.hero-paragraph{
+    max-width: clamp(36rem, 43rem + -22.4vw, 22rem);
+    background-color: rgb(165, 42, 42, 0.3);
+    border-radius: 0 4px 4px 0;
+    border-left: 2px solid white;
+}
+
+.hero-paragraph p{
+    color: antiquewhite;
+    font-size: var(--fs-415);
+    padding-left: 2rem;
+}
+
+.playback-div{
+    width: clamp(5rem, 2.5rem + 8vw, 10rem);
+    height: clamp(5rem, 2.5rem + 8vw, 10rem);
+    background-color: brown;
+    transition: transform 1s;
+    border-radius: 50%;
+    margin-top: 18rem;
+    margin-left: clamp(12rem, 6.6115rem + 15.3477vw, 21rem);
+    cursor: pointer;
+}
+
+.playback-div img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.playback-div:hover::after img{
+    transform: rotateY(360deg);
+}
+
+.playback-div:hover{
+    background-color: blue;
+    transform: scale(1.2);   
+}
+
+@media (max-width: 528px){
+     .playback-div{
+        margin-top: 2rem;
+        margin-left: 12rem;
+    } 
+
+    .hero-content{
+        margin-top: 6rem;
+    }
+}
+
+
+.explore-button{
+    margin-top: 3rem;
+    cursor:pointer;
+    width: 23rem;
+    font-family: 'Poppins';
+    background-color: transparent;
+    border-style:solid;
+    border-inline: none;
+    border-block-color: white;
+    border-width: 1px;
+    padding-block: 0.5rem;
+    position: relative;
+    z-index:1;
+}
+
+.explore-button a{
+    color: white;
+    text-decoration: none;
+}
+
+.explore-button::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(13, 131, 131, 0.8);
+    z-index:-1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 350ms ease-in-out;
+}
+
+.explore-button:hover::after{
+    transform: scaleX(1);
+    border-block-color: white;
+}
+
+.rotating-words span,
+.hero-style{
+    font-family: 'Roboto';
+    letter-spacing: 0.04rem;   
+    font-weight: 1000;
+    font-size: var(--fs-heading);
+    line-height: 1.75;
+}
+
+.hero-word{      
+    color: white;
+    text-wrap:nowrap;
+}
+
+.rotating-words span{
+    display: block;
+    color: aqua;
+    padding-left: 1rem;
+    animation: rotate_words 7s infinite;
+}
+
+.rotating-words{
+    height: clamp(5rem, 3rem + 6.4vw, 9rem);
+    overflow: hidden;
+}
+
+@keyframes rotate_words{
+
+    10%{
+        transform: translateY(-112%);
+    }
+    25%{
+        transform: translateY(-100%);
+    }
+    35%{
+        transform: translateY(-212%);
+    }
+    50%{
+        transform: translateY(-200%);
+    }
+    60%{
+        transform: translateY(-312%);
+    }
+    75%{
+        transform: translateY(-300%);
+    }
+    85%{
+        transform: translateY(-412%);
+    }
+    100%{
+        transform: translateY(-400%);
+    }
+
+}
+
+/*OUR MISSION*/
+.mission-container{
+    grid-column: 1;
+    padding-bottom: 8rem;
+}
+
+
+.mission-content{
+    display: grid;
+    grid-column: 1;
+    padding-inline: clamp(1rem, -12.5rem + 24vw, 10rem);
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax( 16rem , 1fr));
+}
+
+.our-mission-title{
+    text-align: center;
+    padding: 6rem 0 4rem 0;
+    font-size: var(--fs-lg);
+}
+
+.mission-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 22rem;
+    min-height: fit-content;
+    padding-left: 1rem;
+    margin: auto;
+
+
+}
+
+.numbering{
+    display: flex;
+    background-color: brown;
+    height: 2.1rem;
+    border-radius: 50px;
+    align-items: center;
+    gap: 1.2rem;
+    min-width: fit-content;
+    margin-bottom: 1.4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.numbering::after{
+    content: '';
+    width: 1.8rem;
+    border-radius: 50px;
+    height: 1.8rem;
+    left: 0.1rem;
+    background: white;
+    position: absolute;
+    z-index: -1;
+}
+
+.number-img{
+    width: 2rem;
+}
+
+.mission-title{
+    font-size: var(--fs-normal-text);
+    align-items: center;
+    color: wheat;
+    letter-spacing: 0.05rem;
+}
+
+.mission-text{
+    font-size: var(--fs-415);
+}
+
+/*PRINCIPAL MESSAGE*/
+
+.message-container{
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: fit-content;
+    align-items: center;
+    padding-block: 5rem;
+    padding-inline: clamp(3rem, -6rem + 28.8vw, 21rem);
+    background-color: brown;
+    mix-blend-mode: multiply;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(icon/mosque.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+.message-content{
+    text-align: center;
+}
+
+.principal-img-wrapper{
+    max-width: fit-content;
+}
+
+.principal-img{
+    border-radius: 50%;
+    width: clamp(10rem, 7.5rem + 8vw, 15rem);
+    height: clamp(10rem, 7.5rem + 8vw, 15rem);
+    background-color: rgb(245, 222, 179, 0.8);
+}
+
+.principal-tag{
+    font-size: var(--fs-520);
+    font-weight: 500;
+    color: wheat;
+}
+
+.principal-name{
+    font-size: var(--fs-575);
+    font-weight: 300;
+    padding-bottom: 0.75rem;
+    color: wheat;
+}
+
+.principal-message{
+    font-size: var(--fs-520);
+    text-align: center;
+    font-weight: 300;
+    padding: 1rem;
+    color: wheat;
+    border-left: 8px solid brown;
+}
+
+.read-more{
+    display: block;
+    color: wheat;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 1rem;
+    border: none;
+    margin-top: 1rem;
+    text-decoration: underline;
+    font-size: var(--fs-415);
+}
+
+
+/*AMENITIES*/
+
+.amenities-container{
+    grid-column: 1;   
+    padding: 2rem 0 10rem 0;
+    align-items: center;
+    background-color: var(--cbg-section);
+}
+
+.amenities-title{
+    font-family: 'Handlee';
+    font-weight: 700;
+}
+
+.realistic-marker-highlight{
+    position:relative;
+  }
+
+.realistic-marker-highlight:before{
+    content:"";
+    background-color:#ff6db7;
+    width:100%;
+    height:2.2rem;
+    position:absolute;
+    z-index:-1;
+    filter:url(#marker-shape);
+    left:-0.25em;
+    transform: rotate(-2deg);
+    top:0.1rem;
+    padding:0 0.25em;
+  }
+
+.amenities-content-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 16rem , 1fr));
+    padding-inline: clamp(0.5rem, -13.7857rem + 28.5714vw, 13rem);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.amenities-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: clamp(20rem, 16rem + 12.8vw, 28rem);
+    width: clamp(15rem, 8.1429rem + 13.7143vw, 21rem);
+    background-color: white;
+    border-radius: 10px;
+    padding-inline: 1rem;
+    align-items: center;
+    margin: auto;
+    box-shadow: 0px 0px 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media (max-width: 799px){
+
+    .mission-content{
+        display: block;
+        padding-inline: 4rem;
+    }
+
+    .mission-box{   
+        width: clamp(16rem, 4.2943rem + 37.4582vw, 23rem); 
+        padding-block: 2rem;
+    }
+
+    .amenities-content-div{
+        display: block;
+        
+    }
+
+    .amenities-box{
+        width: clamp(16rem, 4.2943rem + 37.4582vw, 23rem); 
+        padding-block: 2rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1240px){
+    
+    .mission-content{
+        grid-template-columns: repeat(auto-fit, minmax( 14rem , 1fr));
+    }
+
+    .mission-box{
+        max-width: 16rem;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1410px){
+    .amenities-content-div{
+        grid-template-columns: repeat(auto-fit, minmax( 10rem , 1fr));
+    }
+}
+
+.amenities-box > p{
+    text-align: center;
+}
+
+.amenities-icon{   
+    height: clamp(7rem, 4.25rem + 5.6vw, 9.5rem);
+    width: clamp(7rem, 5.75rem + 4vw, 9.5rem);
+    padding-bottom: 1.2rem;
+
+}
+
+.sub-pad{
+    padding-bottom: 0.8rem;
+}
+
+
+/*REPORT*/
+
+.report-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1;
+    background-color: rgb(116, 105, 105);
+    min-height: fit-content;
+    align-items: center;
+    gap: 0.8rem;
+    padding: clamp(3rem, 2rem + 3.2vw, 5rem);
+}
+
+.report-text > p{
+    text-align: center;
+    text-wrap: balance;
+    padding-inline: 1rem;
+}
+
+
+.report-title{
+    font-size: var(--fs-lg);
+}
+
+.report-subtitle{
+    font-size: var(--fs-md);
+}
+
+.report-btn{
+    padding: 1rem clamp(5rem , 3.5rem + 4.8vw , 8rem);
+    margin-top: 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 20px;
+    color: white;
+    transition: 300ms;
+}
+
+.report-btn:hover{
+    background-color: yellow;
+    color: black;
+}
+
+
+/*SPECIALTIES*/
+
+.special-container{
+    grid-column: 1;
+    padding: 5rem 2rem 10rem 2rem;
+    background-color: var(--cbg-section);
+}
+
+.special-section-title{
+    max-width: fit-content;
+    margin: auto;
+    border: 3px solid brown;
+    margin-block: 3rem;
+    font-size: var(--fs-lg);
+    color: brown;
+    border-radius: 10px;
+    padding: 0.2rem 10rem;
+}
+
+.special-content-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 16rem , 1fr));
+    justify-items: center;
+    padding-inline: 2rem;
+    margin-top: 4rem;
+    gap: 1rem;
+}
+
+.special-box{
+    min-height: fit-content;
+    padding: 1rem 0.5rem;
+    max-width: 23rem;
+    align-items: center;
+    margin-inline: auto;
+    background: none;
+    position: relative;
+}
+
+.special-box::after{
+    content: '';
+    position: absolute;
+    left: 45%;
+    width: 3rem;
+    height: 3rem;
+}
+
+  .special-box:hover::after{
+    background-image: url(icon/down.svg);
+}  
+
+.special-img-div{
+    height: clamp(16rem, 13rem + 9.6vw, 20rem);
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.image-overlay{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+
+.image-overlay p{
+    width: 70%;
+    font-size: var(--fs-300);
+}
+
+.image-overlay:hover{
+    opacity: 1;
+}
+
+.special-img{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.special-content{
+    display: grid;
+    background-color: brown;
+    border: 4px solid white;
+    transition: background-color 300ms ease-out;
+    color: bisque;
+    border-radius: 0 0 10px 10px;
+    grid-template-rows: 0fr;
+    box-shadow: 0 1px 0.2rem rgba(0, 0, 0, 0.5);
+    transition: grid-template-rows 500ms ease-out;
+    padding: 0.8rem;
+;}
+
+#special1-content::after, 
+#special2-content::after, 
+#special3-content::after{
+    font-weight: 500;
+    text-align: center;
+}
+
+#special1-content::after{
+    content: 'Aminah Therapeutic Garden (ATG)';
+} 
+#special2-content::after{
+    content: 'SuKE: Sustaianable Kelulut System';
+}
+#special3-content::after{
+    content: 'Aminah Healthy Lifestyle (MAHaL)';
+}
+
+.special-content > div{
+    overflow: hidden;
+}
+
+.special-content[aria-hidden = "false"]{
+    grid-template-rows: 1fr;
+   background-color: brown; 
+}
+
+.special-trigger{
+    display: none;
+}
+
+.special-title{
+    font-weight: 500;
+    font-size: var(--fs-md);
+    text-align: center;
+}
+
+.special-text p{
+    padding-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 945px){
+
+    .special-content-div{
+        display: block;
+    }
+
+    .special-box{
+        padding-block: 2rem;
+        max-width: clamp(22rem, 15.2584rem + 21.573vw, 28rem);
+    }
+
+    .special-img-div{
+        height: clamp(20rem, 14.382rem + 17.9775vw, 28rem);
+    }
+}
+
+
+/*FOOTER*/
+my-footer{
+    grid-column: 1;
+}
+
+

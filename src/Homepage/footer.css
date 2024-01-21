@@ -1,0 +1,105 @@
+.footer{
+    grid-column: 1;
+    background-color: rgb(32, 29, 33);
+    min-height: fit-content;
+    color: white;
+}
+
+.footer-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.collab-div{
+    grid-column: 1;
+    justify-content: space-around;
+    display: flex;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.6);
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.collab-logo{
+    width: 6rem;
+    height: 6rem;
+    align-items: center;
+    display: flex;
+    align-items: center;
+}
+
+.collab-logo img{
+    object-fit: contain; 
+}
+
+.sdg{
+    height: 6rem;
+    width: 16rem;
+}
+
+.contact-details{
+    grid-column: 1;
+    display: flex;
+    padding-left: 5rem;
+   
+}
+
+.contact-details a{
+  color: white;
+}
+
+.map-div,
+.contact-div{
+    width: 50%;
+    padding: 2rem;
+}
+
+.contact-div > *{
+    padding-left: 25%;
+}
+
+.map-div > *{
+    padding-bottom: 1.2rem;
+}
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.social-media-div{
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.social-logo{
+    width: 3rem;
+    height: 3rem;
+}
+
+.copyright{
+    grid-column: 1;
+    text-align: center;
+    margin-top: 4rem;
+    font-weight: 200;
+    border: 1px solid rgb(128, 128, 128, 0.6);
+    border-bottom: nones;
+}
+
+@media (max-width: 820px){
+    .contact-details{
+        display: block;
+        padding-left: 2rem;
+    }
+
+    .contact-div > *{
+        padding-left: 1rem;
+    }
+
+    .map-div,
+    .contact-div{
+    width: 90%;
+}
+
+}

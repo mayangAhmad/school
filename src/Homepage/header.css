@@ -1,0 +1,140 @@
+
+.header{
+    height: 6rem;
+    width: 100%;
+    grid-column: 1;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    transition: 350ms ease;
+    justify-content:space-between;
+    background: white;
+    color: white;
+    z-index: 5;
+}
+
+.header.sticking {
+    box-shadow: 0 2px 0.5rem rgb(0,0,0,0.5);
+    background: white;
+}
+
+.middle-nav{
+    flex: 1;
+}
+
+li{
+    min-width: fit-content;
+    transition: 200ms;
+}
+
+a{
+    font-family: system-ui;
+    font-weight: 400;
+    font-size: var(--fs-415);
+    color: rgb(14, 6, 46);
+    letter-spacing: 0.02rem;
+}
+
+li:hover:not(.contact-nav){
+    transform: scale(1.2);
+    text-decoration: 1px underline;
+    text-decoration-color: brown;
+
+}
+
+
+.contact-nav{
+    font-weight: 500;
+    border-radius: 8px;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border: 1px solid brown;
+}
+
+.contact-nav:hover{
+    background-color: brown;
+    color: white;
+}
+
+.logo-div{
+    margin-left: 2rem;
+}
+
+.img-logo{
+    max-width: 6rem;
+}
+
+.navigation{  
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 2rem;
+    padding-inline: clamp(2rem, 10vw, 10rem);
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+.toggle-nav {
+    display: none;
+}
+
+@media (max-width: 958px) {
+
+    .logo-div{
+        margin-left: 1rem;
+    }
+
+    .navigation{
+        position: fixed;
+        z-index: 9000;
+        inset: 0 0 0 60%;
+        background: brown;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        transform: translateX(100%);       
+        transition: transform 350ms ease-out;
+
+    }
+
+    a{
+        font-weight: 400;
+        font-size: var(--fs-425);
+        color: white;
+        letter-spacing: 0.02rem;
+    }
+
+    .toggle-nav{
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-color: transparent;
+        background-image: url(icon/toggle-nav.svg);
+        background-repeat: no-repeat;
+        background-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+        right: 2rem;
+        border: 0;
+
+    }
+
+    .toggle-nav[aria-expanded="true"]{
+        background-image: url(icon/close-nav.svg);
+    }
+
+    .navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .contact-nav{
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+}
+
