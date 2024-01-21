@@ -1,0 +1,128 @@
+.main-container2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.history-section{
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.history-hero{
+    background-color: brown;
+    color: wheat;
+}
+
+.history-title p{
+    margin-left: 5rem;
+    letter-spacing: 0.04rem;   
+    font-family: 'Roboto';
+    line-height: 1.75;
+}
+
+.sub{
+    font-size: var(--fs-md);
+    font-weight: 500;
+}
+
+.main-title{
+    font-size: clamp(1.5rem, -0.2143rem + 3.4286vw, 3.5rem);
+    font-weight: 700;
+    max-width: 50%;
+ 
+}
+
+.history-text{
+     max-width: 50%;
+     padding: 2rem;
+}
+
+.history-img-div{
+    width: 50%;
+    min-height: fit-content;
+}
+
+.history-img{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    
+}
+
+.vision-div{
+    grid-column: 1;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: wheat;
+}
+
+.vision-div p{
+    text-align: center;
+    color: brown;
+    font-size: var(--fs-lg);
+    font-style: italic;
+    font-family:cursive;
+}
+
+.org-chart{
+    grid-column: 1;
+    height: fit-content;
+    padding-bottom: 8rem;
+
+}
+
+.chart-title{
+    font-family: 'Roboto';
+    text-align: center;
+    padding-inline: 3rem;
+}
+
+.chart-img{
+    max-width: 50%;
+}
+
+
+@media (max-width: 850px){
+
+    .history-img-div{
+        width: clamp(25rem, 8.3333rem + 53.3333vw, 35rem);
+        margin: 1rem;
+    }
+
+    .history-hero{
+        padding-top: 1rem;
+    }
+
+    .main-title{
+        font-size:2rem ;
+        max-width: 100%;
+    }
+
+    .history-title p{
+        margin-inline: auto;
+    }
+
+    .history-text{
+        max-width: 80%;
+    }
+
+    .history-section{
+        flex-direction: column;
+        justify-items: center;
+        margin: auto;
+    }
+
+    .chart-img{
+        max-width: 90%;
+    }
+
+}
+
+my-footer{
+    grid-column: 1;
+}
+
